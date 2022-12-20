@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://www.6ird.com/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2022-12-20T09:40:49.234Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://www.6ird.com/"/>
+  <updated>2022-12-20T09:59:12.861Z</updated>
+  <id>https://www.6ird.com/</id>
   
   <author>
     <name>John Doe</name>
@@ -17,11 +17,68 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>安装python采集环境</title>
+    <link href="https://www.6ird.com/archives/python-crawling.html"/>
+    <id>https://www.6ird.com/archives/python-crawling.html</id>
+    <published>2022-12-20T09:54:59.000Z</published>
+    <updated>2022-12-20T09:59:12.861Z</updated>
+    
+    <content type="html"><![CDATA[<p>安装chrome浏览器 1、更新系统</p><p>sudo apt-get update sudo apt upgrade</p><p>2、安装依赖</p><p>sudo apt-get install libxss1 libappindicator1 libindicator7 sudo apt-get install unzip sudo apt-get install dpkg sudo apt-get install xvfb sudo apt-get install python3-pip</p><p>3、下载安装包</p><p>wget <a href="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb">https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</a></p><p>4、安装chrome</p><p>安装chrome，安装过程中由于缺少一些依赖而报错是正常的</p><p>sudo dpkg -i google-chrome-stable_current_amd64.deb</p><p>#自动安装刚才缺少的依赖 sudo apt-get install -f</p><p>查看google 浏览器</p><p>whereis google-chrome</p><p>安装ChromeDriver</p><p>3、下载安装包，这里要重点注意，一定要下载最新版本的chromedriver，这样才能确保跟chrome的版本匹配。去chromedriver官网 <a href="https://chromedriver.chromium.org/">https://chromedriver.chromium.org/</a> 找到当前最新的版本号，如下图所示代表当前最新的版本号是81.0.4044.138</p><p>下载的时候只需要输入下面的命令即可，如果最新版本不是81.0.4044.138，只需要把下面81.0.4044.138替换成新版本的具体版本号即可。</p><p>wget -N <a href="https://chromedriver.storage.googleapis.com/107.0.5304.62/chromedriver_linux64.zip">https://chromedriver.storage.googleapis.com/107.0.5304.62/chromedriver_linux64.zip</a></p><p>4、解压缩刚下载的安装包</p><p>unzip chromedriver_linux64.zip</p><p>5、移动</p><p>sudo mv -f chromedriver &#x2F;usr&#x2F;local&#x2F;share&#x2F;chromedriver</p><p>6、建立软链接</p><p>sudo ln -s &#x2F;usr&#x2F;local&#x2F;share&#x2F;chromedriver &#x2F;usr&#x2F;local&#x2F;bin&#x2F;chromedriver sudo ln -s &#x2F;usr&#x2F;local&#x2F;share&#x2F;chromedriver &#x2F;usr&#x2F;bin&#x2F;chromedriver</p><p>查看安装版本号 chromedriver –version</p><p>安装python的selenium以及其他相关依赖</p><p>2、安装 selenium</p><p>pip3 install selenium</p><p>3、由于python自带的urllib3模块存在问题，所以需要更新或重新安装，否则等下在python里面使用chrome时会报错TypeError: urlopen() got multiple values for keyword argument ‘body’</p><p>sudo pip3 install -U urllib3</p><p>pip3 install lxml pip3 install “urllib3&lt;&#x3D;1.24”</p><p>测试通过python的selenium调用chrome</p><p>1、输入python3命令进入python3的交互式界面</p><p>python3</p><pre><code>后台运行命令：nohup python3 -u /home/wwwroot/start.py &gt; /dev/null 2&gt;&amp;1 &amp;</code></pre><p>ps -ef | grep python</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;安装chrome浏览器 1、更新系统&lt;/p&gt;
+&lt;p&gt;sudo apt-get update sudo apt upgrade&lt;/p&gt;
+&lt;p&gt;2、安装依赖&lt;/p&gt;
+&lt;p&gt;sudo apt-get install libxss1 libappindicator1 libindi</summary>
+      
+    
+    
+    
+    <category term="笔记" scheme="https://www.6ird.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="python" scheme="https://www.6ird.com/tags/python/"/>
+    
+    <category term="采集" scheme="https://www.6ird.com/tags/%E9%87%87%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用acme申请google ssl证书</title>
+    <link href="https://www.6ird.com/archives/acme-google-ssl.html"/>
+    <id>https://www.6ird.com/archives/acme-google-ssl.html</id>
+    <published>2022-12-20T09:46:31.000Z</published>
+    <updated>2022-12-20T09:54:16.656Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先登录 <a href="https://console.cloud.google.com/apis/library/publicca.googleapis.com?project=XXXXX">https://console.cloud.google.com/apis/library/publicca.googleapis.com?project=XXXXX</a> 如果没有权限就点启用,然后点右上角的激活 cloud shell ,成功授权后在 Cloud Shell 获取需要签发的key 输入 gcloud beta publicca external-account-keys create</p><p>Created an external account key [b64MacKey: XXXXXXXXXXXX keyId: XXXXXXX]</p><p>wget -O- <a href="https://get.acme.sh/">https://get.acme.sh</a> | sh</p><p>source ~&#x2F;.bashrc</p><p>acme.sh –set-default-ca –server google</p><p>acme.sh –register-account -m <a href="mailto:&#x77;&#119;&#119;&#x40;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#x6d;">&#x77;&#119;&#119;&#x40;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a> –server google<br>–eab-kid XXXXXX<br>–eab-hmac-key XXXX</p><p>export CF_Key&#x3D;”XXXX”</p><p>export CF_Email&#x3D;”<a href="mailto:&#119;&#x77;&#119;&#64;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#119;&#x77;&#119;&#64;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a>“</p><p>acme.sh –issue –dns dns_cf -d XXXX.com -d *.XXXX.com</p><p>acme.sh –installcert -d XXXX.com<br>–key-file &#x2F;home&#x2F;vhost&#x2F;cert&#x2F;XXXX.com&#x2F;XXXX.com.key<br>–fullchain-file &#x2F;home&#x2F;vhost&#x2F;cert&#x2F;XXXX.com&#x2F;XXXX.com.cer<br>–reloadcmd “&#x2F;usr&#x2F;sbin&#x2F;nginx -s reload -c &#x2F;etc&#x2F;nginx&#x2F;nginx.conf”</p><p> 更新证书</p><p>acme.sh –renew -d XXXX.com –force</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;首先登录 &lt;a href=&quot;https://console.cloud.google.com/apis/library/publicca.googleapis.com?project=XXXXX&quot;&gt;https://console.cloud.google.com/apis/</summary>
+      
+    
+    
+    
+    <category term="笔记" scheme="https://www.6ird.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="acme" scheme="https://www.6ird.com/tags/acme/"/>
+    
+    <category term="google" scheme="https://www.6ird.com/tags/google/"/>
+    
+    <category term="ssl" scheme="https://www.6ird.com/tags/ssl/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="http://example.com/post/hello-world.html"/>
-    <id>http://example.com/post/hello-world.html</id>
+    <link href="https://www.6ird.com/archives/hello-world.html"/>
+    <id>https://www.6ird.com/archives/hello-world.html</id>
     <published>2022-11-21T07:04:21.362Z</published>
-    <updated>2022-12-20T09:40:49.234Z</updated>
+    <updated>2022-12-20T09:58:46.159Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
@@ -33,14 +90,14 @@
     
     
     
-    <category term="默认" scheme="http://example.com/categories/%E9%BB%98%E8%AE%A4/"/>
+    <category term="默认" scheme="https://www.6ird.com/categories/%E9%BB%98%E8%AE%A4/"/>
     
     
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    <category term="hexo" scheme="https://www.6ird.com/tags/hexo/"/>
     
-    <category term="github" scheme="http://example.com/tags/github/"/>
+    <category term="github" scheme="https://www.6ird.com/tags/github/"/>
     
-    <category term="aurora" scheme="http://example.com/tags/aurora/"/>
+    <category term="aurora" scheme="https://www.6ird.com/tags/aurora/"/>
     
   </entry>
   
