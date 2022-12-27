@@ -2,7 +2,6 @@ https://www.6ird.com/about/index.html
 https://www.6ird.com/archives/acme-google-ssl.html
 https://www.6ird.com/archives/python-crawling.html
 https://www.6ird.com/archives/hello-world.html
-https://www.6ird.com/message-board/index.html
 https://www.6ird.com/
 https://www.6ird.com/tags/acme/
 https://www.6ird.com/tags/google/
