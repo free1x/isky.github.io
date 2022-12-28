@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.6ird.com/archives/ubuntu-keylogin-time.html</loc>
+    
+    <lastmod>2022-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6ird.com/archives/python-crawling.html</loc>
+    
+    <lastmod>2022-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.6ird.com/about/index.html</loc>
     
     <lastmod>2022-12-27</lastmod>
@@ -12,15 +30,6 @@
   
   <url>
     <loc>https://www.6ird.com/archives/acme-google-ssl.html</loc>
-    
-    <lastmod>2022-12-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.6ird.com/archives/python-crawling.html</loc>
     
     <lastmod>2022-12-20</lastmod>
     
@@ -40,7 +49,7 @@
 
   <url>
     <loc>https://www.6ird.com/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -48,56 +57,77 @@
   
   <url>
     <loc>https://www.6ird.com/tags/acme/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.6ird.com/tags/google/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.6ird.com/tags/ssl/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.6ird.com/tags/hexo/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.6ird.com/tags/github/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.6ird.com/tags/aurora/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.6ird.com/tags/python/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.6ird.com/tags/%E9%87%87%E9%9B%86/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6ird.com/tags/Ubuntu/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6ird.com/tags/%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.6ird.com/tags/%E6%97%B6%E5%8C%BA%E6%97%B6%E9%97%B4/</loc>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -106,14 +136,14 @@
   
   <url>
     <loc>https://www.6ird.com/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.6ird.com/categories/%E9%BB%98%E8%AE%A4/</loc>
-    <lastmod>2022-12-27</lastmod>
+    <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
